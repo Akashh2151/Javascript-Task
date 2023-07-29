@@ -1,27 +1,34 @@
-function gradcalculation() {
-     var num1=100
-     if(mark>=75 || mark<=90 ){
-          console.log(`${mark} plz provied valid mark`);
-     }
-     else{
- ole.log("askh");
-     }
- 
-           
-      
-    
+function gradeCalculation(marks) {
+  if (typeof marks !== 'number' || marks < 0 || marks > 100 || isNaN(marks)) {
+    console.log(`The marks you entered: ${marks} is not valid. Please provide valid marks.`);
+    return;
+  }
+
+  if (marks >= 90) {
+    console.log(`Fantastic marks: ${marks}, Your grade is A+`);
+  } else if (marks >= 75) {
+    console.log(`Excellent marks: ${marks}, Your grade is A`);
+  } else if (marks >= 50) {
+    console.log(`Good marks: ${marks}, Your grade is B`);
+  } else if (marks >= 35) {
+    console.log(`Marks is: ${marks}, Your grade is C, Need Improvement.`);
+  } else {
+    console.log(`Marks is: ${marks}, Your grade is F, Failed`);
+  }
 }
-gradcalculation(98,80,90,0,150,-7,35,29,64,49,91,"eighty",null,undefined)
-// gradcalculation(80)
-// gradcalculation(90)
-// gradcalculation(0)
-// gradcalculation(150)
-// gradcalculation(-7)
-// gradcalculation(35)
-// gradcalculation(29)
-// gradcalculation(64)
-// gradcalculation(49)
-// gradcalculation(91)
-// gradcalculation("Eighy")
-// gradcalculation(null)
-// gradcalculation(undefined)
+
+// Invoking the function with the provided values
+gradeCalculation(98);
+gradeCalculation(80);
+gradeCalculation(90);
+gradeCalculation(0);
+gradeCalculation(150);
+gradeCalculation(-7);
+gradeCalculation(35);
+gradeCalculation(29);
+gradeCalculation(64);
+gradeCalculation(49);
+gradeCalculation(91);
+gradeCalculation("Eighy"); // The input is "Eighy", not "Eighty".
+gradeCalculation(null);
+gradeCalculation(undefined);
