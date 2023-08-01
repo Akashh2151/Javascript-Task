@@ -39,7 +39,7 @@ console.log("_____________________________________________");
 for (let index = 70; index >=7; index=index-7) {
     console.log(index); 
 }
-console.log("_____________________________________________");
+console.log("______________odd number_______________________________");
 // frist 5 odd number
 for (let index = 1; index < 10; index=index+2) {
     console.log(index);
